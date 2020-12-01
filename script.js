@@ -1,7 +1,7 @@
 const btn = document.getElementById("add");
 const lists = document.getElementById("lists");
 
-btn.addEventListener("click",async function(){
+async function listUsers(){
     const res = await fetch("https://jsonplaceholder.typicode.com/users");
     const users = await res.json();
     
@@ -16,19 +16,7 @@ btn.addEventListener("click",async function(){
         });
     }
     
-});
-addEventListener("load" ,async function(){
-    
-    const res = await fetch("https://jsonplaceholder.typicode.com/users");
-    const users = await res.json();
-    
-    if(confirm("実行しますか？") === true){
-        
-        users.forEach(function(user) {
-            const list = document.createElement("li");
-            lists.appendChild(list);
-            list.innerText = user.name;
-            console.log(list);
-        });
-    }
-});
+}
+
+btn.addEventListener("click",listUsers);
+addEventListener("load" ,listUsers);
