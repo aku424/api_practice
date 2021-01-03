@@ -51,3 +51,15 @@ const check = (text)=>{
     }
 }
 check("ttt");
+
+
+//天気機能
+
+async function callApi(){
+    const apiKey ="19671a8a567f6c85d12d7da2df1575be";
+    res = await fetch("http://api.openweathermap.org/data/2.5/weather?q=tokyo&units=metric&appid=" + apiKey)
+    // res = await fetch("http://api.openweathermap.org/data/2.5/weather?q=" + $('#cityname').val() + "&units=metric&appid=" + apiKey)
+    const weather = await res.json();
+    console.log(weather);
+}
+callApi()
