@@ -4,10 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .main{
+            display: flex;
+        }
+    </style>
 </head>
 <body>
-    <ol id="lists"></ol>
-    <button id="add">もっと</button>
+    <section class="main">
+        <div class="weather">
+            <table>
+                <caption>世界の天気</caption>
+                <thead>
+                    <tr>
+                        <th>都市名：</th>
+                        <th>場所:</th>
+                        <th>最高気温:</th>
+                        <th>最低気温:</th>
+                        <th>湿度:</th>
+                        <th>風速:</th>
+                        <th>天気:</th>
+                        <th colspan="1"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span><input id="cityname" placeholder="Tokyo"></span><button id="btn">検索</button></td>
+                        <td><span id="place"></span></td>
+                        <td><span id="temp_max"></span>℃</td>
+                        <td><span id="temp_min"></span>℃</td>
+                        <td><span id="humidity"></span> %</td>
+                        <td><span id="speed"></span> m/s</td>
+                        <td><span id="weather"></span></td>
+                        <td><div id="icon"><img id="img"></div></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div>
+            <ol id="lists"></ol>
+            <button id="add">もっと</button>
+        </div>
+    </section>
     <script src="script.js"></script>
 </body>
 </html>

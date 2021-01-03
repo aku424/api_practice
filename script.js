@@ -27,3 +27,27 @@ async function listUsers(){
 addEventListener("load" ,listUsers);
 
 btn.addEventListener("click",listUsers);
+
+
+
+function foo(text){
+    console.log(text);
+}
+foo("たくと");
+
+const foo1 =(text1)=>{
+    console.log(text1);
+}
+foo1("拓斗");
+
+
+const isTweetable = (test)=>{
+    return test.length <=140;
+};
+
+const check = (text)=>{
+    if( isTweetable(text)){
+        console.log("you can tweet!");
+    }
+}
+check("ttt");
